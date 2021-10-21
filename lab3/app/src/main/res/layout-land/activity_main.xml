@@ -10,7 +10,7 @@
 
     <FrameLayout
         android:id="@+id/frame1"
-        android:layout_width="366dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
 
         android:background="@color/color_frame1"
@@ -24,7 +24,7 @@
 
     <FrameLayout
         android:id="@+id/frame2"
-        android:layout_width="366dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/color_frame2"
 
@@ -38,7 +38,7 @@
 
     <FrameLayout
         android:id="@+id/frame3"
-        android:layout_width="366dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
 
         android:background="@color/color_frame3"
@@ -52,7 +52,7 @@
 
     <FrameLayout
         android:id="@+id/frame4"
-        android:layout_width="366dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
 
         android:background="@color/color_frame4"
