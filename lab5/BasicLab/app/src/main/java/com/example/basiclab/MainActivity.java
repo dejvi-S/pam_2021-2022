@@ -59,9 +59,18 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        View contextView = findViewById(R.id.toolbar);
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Snackbar.make(contextView, R.string.snack_bar_settings1, Snackbar.LENGTH_SHORT)
+                    .show();
+        } else if(id == R.id.action_settings2) {
+            Snackbar.make(contextView, R.string.snack_bar_settings2, Snackbar.LENGTH_LONG)
+                    .show();
+        } else if(id == R.id.action_settings3) {
+            Snackbar.make(contextView, R.string.snack_bar_settings3, Snackbar.LENGTH_INDEFINITE)
+                    .show();
         }
 
         return super.onOptionsItemSelected(item);

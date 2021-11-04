@@ -1,19 +1,22 @@
 package com.example.basiclab;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.basiclab.databinding.FragmentSecondBinding;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-public class SecondFragment extends Fragment {
+import com.example.basiclab.databinding.FragmentFirstBinding;
+import com.example.basiclab.databinding.FragmentThirdBinding;
 
-    private FragmentSecondBinding binding;
+
+public class ThirdFragment extends Fragment {
+
+    private FragmentThirdBinding binding;
 
     @Override
     public View onCreateView(
@@ -21,7 +24,7 @@ public class SecondFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = FragmentThirdBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -32,16 +35,16 @@ public class SecondFragment extends Fragment {
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_thirdFragment);
+                NavHostFragment.findNavController(ThirdFragment.this)
+                        .navigate(R.id.action_thirdFragment_to_FirstFragment);
             }
         });
 
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
+                NavHostFragment.findNavController(ThirdFragment.this)
+                        .navigate(R.id.action_thirdFragment_to_SecondFragment);
             }
         });
     }
@@ -51,5 +54,4 @@ public class SecondFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
 }
